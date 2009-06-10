@@ -1,0 +1,8 @@
+<fieldset>
+    <p>Current Photo</p>
+    <%= image_tag @contact.photo.url(:thumb) %>
+
+    <p><label for='photo'>Upload Photo:</label></p>
+    <p><%= f.file_field :photo%></p>
+    <p class="small">You can only upload a JPG, GIF or PNG (File size limit is 4 MB).</p>
+</fieldset>
