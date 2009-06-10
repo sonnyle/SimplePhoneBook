@@ -1,20 +1,14 @@
-== Welcome
+= Welcome
 
 PhoneBook is a single-user application for keeping track of the people you work with. 
 It's a clean, simple app and has no stylesheets, you can easily plug it into your own design or templates. This application is a working proto-type to demonstrate functions using Ruby on Rails.
-    Author: Sonny Le
+- Author: Sonny Le
 
-== Getting Started
-
-= Requirements
+=== Requirements
 Ruby 1.8.6
 Rails 2.1.x or above
 Imagemagick
 MySQL
-
-= Plugins
-Paperclip - Easy file attachment library for ActiveRecord
-will_paginate - Pagination
 
 = Installation
 You can clone the app from github:
@@ -30,3 +24,7 @@ Once the app is installed and setup, start the server:
     ruby script/server
 
 If you have any questions or comments please e-mail son.thai.le@gmail.com
+
+=== Plugins
+- Paperclip - Easy file attachment library for ActiveRecord
+- will_paginate - Pagination
