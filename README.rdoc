@@ -17,6 +17,9 @@ Paperclip - Easy file attachment library for ActiveRecord - http://github.com/th
 will_paginate - Pagination - http://github.com/mislav/will_paginate/tree
 
 
+<h4>Download</h4>
+Clone the app from git:
+git clone git://github.com/sonnyle/SimplePhoneBook.git
 
 <h1>Author</h1>
 Sonny Le, son.thai.le@gmail.com
