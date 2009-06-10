@@ -1,0 +1,7 @@
+development:
+  adapter: mysql
+  database: phonebook
+  encoding: utf8
+  username: root
+  password: 
+  host: localhost

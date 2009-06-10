@@ -1,0 +1,10 @@
+<h3>Update Company</h3>
+
+<% form_for(@company, :html=>{ :method => :put }) do |f| %>  
+  <%= f.error_messages %>
+
+  <%= render :partial => 'form',  :locals => {:f => f}%>      
+  <label for='contacts'><span>Contact Lists</span></label>    
+  <%= render :partial => 'contact_selector', :locals => {:company => @company} %>   
+  <p class="submit"><%= f.submit "Update" %> | <%= link_to "Cancel", company_path(@company) %> </p>  
+<% end %>

@@ -1,0 +1,14 @@
+<h3>Contact View</h3>
+<hr />
+
+<h4><%= @contact.first_name %> <%= @contact.last_name %></h4> 
+<%= image_tag @contact.photo.url %>
+
+<p>e: <%= @contact.email %> </p>
+<p>p: <%= @contact.phone%> </p>
+<p>work: <%= (link_to @contact.company.name, company_path(@contact.company)) rescue nil %> </p>
+
+<br /><br />
+
+<%= link_to "Edit", edit_contact_path(@contact) %> |
+<%= link_to "Home", contacts_path %>

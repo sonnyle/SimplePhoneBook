@@ -1,0 +1,22 @@
+<h1>Welcome</h1>
+
+PhoneBook is a single-user application for keeping track of the people you work with. 
+It's a clean, simple app and has no stylesheets, you can easily plug it into your own design or templates. This application is a working proto-type to demonstrate funtionalities using Ruby on Rails.
+
+<h1>Getting Started</h1>
+
+<h2>Requirements</h2>
+
+<h4>Systems</h4>
+Ruby 1.8.6
+Rails 2.1.x or above
+Imagemagick
+
+<h4>Plugins</h4>
+Paperclip - Easy file attachment library for ActiveRecord - http://github.com/thoughtbot/paperclip/tree/master
+will_paginate - Pagination - http://github.com/mislav/will_paginate/tree
+
+
+
+<h1>Author</h1>
+Sonny Le, son.thai.le@gmail.com

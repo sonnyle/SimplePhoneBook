@@ -1,0 +1,15 @@
+<h3>Company View</h3>
+<hr />
+
+<h4><%= @company.name %></h4> 
+
+<p>a: <%= @company.full_address %> </p>
+
+<h4>Contacts List</h4>
+<%= render :partial => 'contact_list',  :locals => {:company => @company}%>    
+
+<br />
+
+<%= link_to "Edit", edit_company_path(@company) %> |
+<%= link_to "Companies List", companies_path %> |
+<%= link_to "Home", "/" %>

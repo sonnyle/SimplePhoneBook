@@ -1,0 +1,43 @@
+/* Source http://www.hedgerwow.com/360/dhtml/ui_input_listbox/demo.php?s%5B%5D=50 */
+
+/*generic rules*/
+div.listbox{
+    background:white;
+    font-size:12px;
+    padding:0;
+    list-style:none;
+    overflow:auto;
+    border:solid 1px #666666;
+    scrollbar-face-color:#cccccc; 
+    scrollbar-highlight-color: #eeeeee; 
+    scrollbar-shadow-color: buttonface; 
+    scrollbar-3dlight-color: #aaaaaa; 
+    scrollbar-arrow-color: #ffffff; 
+    scrollbar-track-color: #eeeeee; 
+    scrollbar-darkshadow-color: #aaaaaa;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    min-height: 50px;
+    max-height: 100px; 
+    min-width: 140px;
+    max-width: 140px;
+}
+
+div.listbox label input{float:left;}
+div.listbox label{display:block;clear:both;}
+div.listbox span{white-space:nowrap;height:1em;display:block;padding:3px 6px 3px 0px;cursor:hand;cursor:pointer;}
+
+/*CSS 2.0 behaviors*/
+div.listbox[id] label:hover{background-color:#DEDEDE;color:black;}
+
+/*For CSS3 ompatible browsers (ie:FireFox) */
+/*div.listbox label input:not([Hedger]){display:none;_display:block;_float:left;_width:0;behavior:expression(void(init_listbox_checkbox(this)));}
+div.listbox span:not([Hedger]){padding-left:22px;background:url(/images/icons/bullet_add.png) left center no-repeat;border:solid 1px white;border-bottom-color:#f0f0f0;border-left:solid 6px #dedede;}*/
+div.listbox[id] input:checked+span{background-color:#D3B8D2;background-image:url(/images/icons/tick.png);border-color:#CC9933;border-bottom-color:#f0f0f0;border-left:solid 6px #222222;}
+
+
+
+/*for IE*/* html div.listbox label input{display:block;float:left;width:0;behavior:expression(void(init_listbox_checkbox(this)));}
+/*for IE*/* html div.listbox span{padding-left:22px;background:url(/images/icons/bullet_add.png) left center no-repeat;border:solid 1px white;border-bottom-color:#f0f0f0;border-left:solid 6px #dedede;}
+/*for IE*/div.listbox label.hover{background-color:#DEDEDE;color:black;}
+/*for IE*/div.listbox span.checked{background-image:url(/images/icons/tick.png);background-color:#D3B8D2;border-color:#CC9933;border-bottom-color:#f0f0f0;border-left:solid 6px #222222;}

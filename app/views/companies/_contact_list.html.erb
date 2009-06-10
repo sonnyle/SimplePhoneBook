@@ -1,0 +1,9 @@
+<% if company.contacts.empty? %>
+    <p>No contact so far</p>
+<% else %>
+    <ul>
+        <% company.contacts.sort! { |x,y| x.first_name.downcase <=> y.first_name.downcase }.each do |contact| %>
+          <li><%= link_to contact.full_name, contact_path(contact) %> </li>
+        <% end %>
+    </ul>
+<% end %>
