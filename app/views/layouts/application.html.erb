@@ -8,28 +8,33 @@
 </head>
 <body>
 <!-- Main Content Starts -->
+<div id="header">
+    <div style="width: 50%; float:left; font-size: x-large;" id="logo-text">
+        Simple Phone Book
+    </div>
+    <div style="width: 50%; float:right; text-align: right;">
+        <%= link_to "Contacts", contacts_path %> | 
+        <%= link_to "Companies", companies_path %>
+    </div>
+</div>
+
+<div>
+  <p class="block">
+  <% if (flash[:notice]  && !flash[:notice].blank?) %>
+    <div id="flash_notice">
+      <%= flash[:notice]%>
+    </div>
+  <% end %>
+  <% if (flash[:error]  && !flash[:error].blank?) %>
+    <div id="flash_error">
+      <%= flash[:error]%>
+    </div>
+  <% end %>
+  </p>
+</div>
+
 <div id="main">
-    <p class="block">
-    <% if (flash[:notice]  && !flash[:notice].blank?) %>
-      <div id="flash_notice">
-        <%= flash[:notice]%>
-      </div>
-    <% end %>
-    <% if (flash[:error]  && !flash[:error].blank?) %>
-      <div id="flash_error">
-        <%= flash[:error]%>
-      </div>
-    <% end %>
-    </p>
-    
-    <p>
-      <%= link_to "Contacts", contacts_path %> | 
-      <%= link_to "Companies", companies_path %>
-    </p>
-
-    <%= yield %>
-
-
+  <%= yield %>
 </div>
 <!-- Main Content Ends -->
 </body>

@@ -5,7 +5,9 @@
         <%= submit_tag "Search" %>
 <% end -%>
 
-<table>
+<br />
+
+<table width="100%">
   <tr>
     <th></th>
     <th>Name</th>
@@ -27,7 +29,9 @@
 <% end %>
 </table>
 
-<%= will_paginate @contacts %>
+<div style="text-align: center;">
+    <%= will_paginate @contacts %>
+</div>
 
 <br />
 

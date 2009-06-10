@@ -9,10 +9,11 @@ class Company < ActiveRecord::Base
   def full_address
     full_address = []
     full_address << self.address_line_1 
-    full_address << self.address_line_2 if self.address_line_2
-    full_address << self.city if self.city
-    full_address << self.county if self.county    
-    full_address << self.postcode if self.postcode
+    full_address << self.address_line_2
+    full_address << self.city
+    full_address << self.county 
+    full_address << self.postcode
+    full_address.delete(nil)
     full_address.join("<br />")
   end
   

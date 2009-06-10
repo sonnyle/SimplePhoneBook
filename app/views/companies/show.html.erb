@@ -1,15 +1,16 @@
 <h3>Company View</h3>
-<hr />
 
-<h4><%= @company.name %></h4> 
+<div style="width: 50%; float: left;">
+    <h4><%= @company.name %></h4>  
+    <p><%= @company.full_address %></p>
+</div>
+<div style="width: 50%; float: right;">
+    <h4>Contacts List</h4>
+    <%= render :partial => 'contact_list',  :locals => {:company => @company}%>  
+</div>
 
-<p>a: <%= @company.full_address %> </p>
+<div style="float:left; width:100%;">
+    <%= link_to "Edit", edit_company_path(@company) %> |
+    <%= link_to "Home", "/" %>
+</div>
 
-<h4>Contacts List</h4>
-<%= render :partial => 'contact_list',  :locals => {:company => @company}%>    
-
-<br />
-
-<%= link_to "Edit", edit_company_path(@company) %> |
-<%= link_to "Companies List", companies_path %> |
-<%= link_to "Home", "/" %>

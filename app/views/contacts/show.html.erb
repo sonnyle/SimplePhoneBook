@@ -1,14 +1,17 @@
 <h3>Contact View</h3>
-<hr />
 
-<h4><%= @contact.first_name %> <%= @contact.last_name %></h4> 
-<%= image_tag @contact.photo.url %>
+<div style="width: 50%; float: left;">
+  <h4><%= @contact.full_name %></h4> 
+  <p>e: <%= @contact.email %> </p>
+  <p>p: <%= @contact.phone%> </p>
+  <p>work: <%= (link_to @contact.company.name, company_path(@contact.company)) rescue nil %> </p>
+</div>
+<div style="width: 50%; float: right;">
+  <%= image_tag @contact.photo.url %>
+</div>
 
-<p>e: <%= @contact.email %> </p>
-<p>p: <%= @contact.phone%> </p>
-<p>work: <%= (link_to @contact.company.name, company_path(@contact.company)) rescue nil %> </p>
+<div style="float:left; width:100%;">
+  <%= link_to "Edit", edit_contact_path(@contact) %> |
+  <%= link_to "Home", contacts_path %>
+</div>
 
-<br /><br />
-
-<%= link_to "Edit", edit_contact_path(@contact) %> |
-<%= link_to "Home", contacts_path %>

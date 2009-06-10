@@ -47,13 +47,37 @@ a:hover { color: #fff; background-color:#000; }
 }
 
 tr.odd td {       
-	background: #F5F5F5;
+  background: #F5F5F5;
 }
 
 tr.even td {       
-	background: #FFFFFF;
+  background: #FFFFFF;
 }
 
 #search {
-    color: grey;
+  color: grey;
+}
+
+#main{
+  width:560px;
+  float:left;
+  padding:0 0 30px 15px;       
+}
+
+#header{
+  width:560px;
+  padding:30px 30px 30px 15px;
+  border-bottom:1px solid #d0d0d0;
+}
+
+#flash_notice { 
+  padding: .5em 0 .5em 0; 
+  margin-bottom: 1em;   
+  color: #32328C; 
+}
+
+#flash_error { 
+  padding: .5em 0 .5em 0; 
+  margin-bottom: 1em;     
+  color: #EE0000; 
 }

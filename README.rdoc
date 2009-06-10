@@ -13,9 +13,8 @@ Rails 2.1.x or above
 Imagemagick
 
 <h4>Plugins</h4>
-Paperclip - Easy file attachment library for ActiveRecord - http://github.com/thoughtbot/paperclip/tree/master
-will_paginate - Pagination - http://github.com/mislav/will_paginate/tree
-
+Paperclip - Easy file attachment library for ActiveRecord
+will_paginate - Pagination
 
 <h4>Download</h4>
 Clone the app from git:
