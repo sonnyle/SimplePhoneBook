@@ -5,12 +5,12 @@ It's a clean, simple app and has no stylesheets, you can easily plug it into you
 - Author: Sonny Le
 
 === Requirements
-Ruby 1.8.6
-Rails 2.1.x or above
-Imagemagick
-MySQL
+- Ruby 1.8.6
+- Rails 2.1.x or above
+- Imagemagick
+- MySQL
 
-= Installation
+=== Installation
 You can clone the app from github:
     git clone git://github.com/sonnyle/SimplePhoneBook.git
 
