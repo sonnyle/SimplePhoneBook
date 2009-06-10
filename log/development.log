@@ -5810,3 +5810,151 @@ Processing ContactsController#index (for 127.0.0.1 at 2009-06-10 22:14:32) [GET]
 Rendering template within layouts/application
 Rendering contacts/index
 Completed in 219ms (View: 32, DB: 31) | 200 OK [http://localhost/contacts]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#index (for 127.0.0.1 at 2009-06-10 22:42:03) [GET]
+
+SyntaxError (F:/Projects/SimplePhoneBook/app/models/contact.rb:22: premature end of regular expression: /^([0\]{2,2})+ (\d\d\d)+ (\d\d\d\d\d\d)+$/):
+  app/controllers/contacts_controller.rb:5:in `index'
+
+Rendered rescues/_trace (109.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#index (for 127.0.0.1 at 2009-06-10 22:42:20) [GET]
+  [4;36;1mContact Load (0.0ms)[0m   [0;1mSELECT * FROM `contacts` ORDER BY first_name ASC LIMIT 0, 5[0m
+  [4;35;1mContact Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `contacts` [0m
+Rendering template within layouts/application
+Rendering contacts/index
+Completed in 234ms (View: 171, DB: 16) | 200 OK [http://localhost/contacts]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#show (for 127.0.0.1 at 2009-06-10 22:42:27) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mContact Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+  [4;36;1mContact Load (0.0ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering contacts/show
+Completed in 78ms (View: 31, DB: 16) | 200 OK [http://localhost/contacts/2]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#index (for 127.0.0.1 at 2009-06-10 22:42:29) [GET]
+  [4;35;1mContact Load (0.0ms)[0m   [0mSELECT * FROM `contacts` ORDER BY first_name ASC LIMIT 0, 5[0m
+  [4;36;1mContact Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `contacts`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `contacts` [0m
+Rendering template within layouts/application
+Rendering contacts/index
+Completed in 94ms (View: 31, DB: 16) | 200 OK [http://localhost/contacts]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#new (for 127.0.0.1 at 2009-06-10 22:42:30) [GET]
+  [4;36;1mContact Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `contacts`[0m
+Rendering template within layouts/application
+Rendering contacts/new
+  [4;35;1mCompany Load (16.0ms)[0m   [0mSELECT * FROM `companies` ORDER BY name[0m
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+Rendered contacts/_form (47.0ms)
+Completed in 109ms (View: 46, DB: 32) | 200 OK [http://localhost/contacts/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#create (for 127.0.0.1 at 2009-06-10 22:42:32) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"aMypDX7+t6t2Ajaj3EZQxERLTzCdE+t8+sv5G75QH1M=", "contact"=>{"company_id"=>"", "phone"=>"", "first_name"=>"", "last_name"=>"", "email"=>""}}
+  [4;35;1mContact Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mContact Exists (0.0ms)[0m   [0mSELECT `contacts`.id FROM `contacts` WHERE (LOWER(`contacts`.`email`) = BINARY '') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering contacts/new
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM `companies` ORDER BY name[0m
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+Rendered contacts/_form (47.0ms)
+Completed in 188ms (View: 78, DB: 0) | 200 OK [http://localhost/contacts]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#create (for 127.0.0.1 at 2009-06-10 22:42:52) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"aMypDX7+t6t2Ajaj3EZQxERLTzCdE+t8+sv5G75QH1M=", "contact"=>{"company_id"=>"", "phone"=>"11 000 000000", "first_name"=>"Tabby", "last_name"=>"Marrie", "email"=>"tab@test.com"}}
+  [4;35;1mContact Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mContact Exists (0.0ms)[0m   [0mSELECT `contacts`.id FROM `contacts` WHERE (LOWER(`contacts`.`email`) = BINARY 'tab@test.com') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering contacts/new
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM `companies` ORDER BY name[0m
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+Rendered contacts/_form (31.0ms)
+Completed in 500ms (View: 47, DB: 0) | 200 OK [http://localhost/contacts]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#create (for 127.0.0.1 at 2009-06-10 22:43:00) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"aMypDX7+t6t2Ajaj3EZQxERLTzCdE+t8+sv5G75QH1M=", "contact"=>{"company_id"=>"", "phone"=>"00 000 000000", "first_name"=>"Tabby", "last_name"=>"Marrie", "email"=>"tab@test.com"}}
+  [4;35;1mContact Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mContact Exists (0.0ms)[0m   [0mSELECT `contacts`.id FROM `contacts` WHERE (LOWER(`contacts`.`email`) = BINARY 'tab@test.com') LIMIT 1[0m
+  [4;36;1mContact Create (0.0ms)[0m   [0;1mINSERT INTO `contacts` (`photo_file_name`, `photo_file_size`, `updated_at`, `photo_content_type`, `phone`, `company_id`, `first_name`, `last_name`, `email`, `created_at`) VALUES(NULL, NULL, '2009-06-10 21:43:00', NULL, '00 000 000000', NULL, 'Tabby', 'Marrie', 'tab@test.com', '2009-06-10 21:43:00')[0m
+[paperclip] Saving attachments.
+  [4;35;1mSQL (78.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/contacts/7
+Completed in 110ms (DB: 78) | 302 Found [http://localhost/contacts]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#show (for 127.0.0.1 at 2009-06-10 22:43:01) [GET]
+  Parameters: {"id"=>"7"}
+  [4;36;1mContact Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `contacts`[0m
+  [4;35;1mContact Load (16.0ms)[0m   [0mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 7) [0m
+Rendering template within layouts/application
+Rendering contacts/show
+Completed in 172ms (View: 141, DB: 16) | 200 OK [http://localhost/contacts/7]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#index (for 127.0.0.1 at 2009-06-10 22:43:06) [GET]
+  [4;36;1mContact Load (0.0ms)[0m   [0;1mSELECT * FROM `contacts` ORDER BY first_name ASC LIMIT 0, 5[0m
+  [4;35;1mContact Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `contacts` [0m
+Rendering template within layouts/application
+Rendering contacts/index
+Completed in 78ms (View: 31, DB: 16) | 200 OK [http://localhost/contacts]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#index (for 127.0.0.1 at 2009-06-10 22:43:56) [GET]
+  Parameters: {"page"=>"2"}
+  [4;35;1mContact Load (0.0ms)[0m   [0mSELECT * FROM `contacts` ORDER BY first_name ASC LIMIT 5, 5[0m
+Rendering template within layouts/application
+Rendering contacts/index
+  [4;36;1mContact Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `contacts`[0m
+Completed in 63ms (View: 16, DB: 15) | 200 OK [http://localhost/contacts?page=2]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#index (for 127.0.0.1 at 2009-06-10 22:43:59) [GET]
+  Parameters: {"page"=>"1"}
+  [4;35;1mContact Load (0.0ms)[0m   [0mSELECT * FROM `contacts` ORDER BY first_name ASC LIMIT 0, 5[0m
+  [4;36;1mContact Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `contacts`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `contacts` [0m
+Rendering template within layouts/application
+Rendering contacts/index
+Completed in 78ms (View: 31, DB: 0) | 200 OK [http://localhost/contacts?page=1]

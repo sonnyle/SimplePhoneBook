@@ -1,24 +1,32 @@
-<h1>Welcome</h1>
+== Welcome
 
 PhoneBook is a single-user application for keeping track of the people you work with. 
-It's a clean, simple app and has no stylesheets, you can easily plug it into your own design or templates. This application is a working proto-type to demonstrate funtionalities using Ruby on Rails.
+It's a clean, simple app and has no stylesheets, you can easily plug it into your own design or templates. This application is a working proto-type to demonstrate functions using Ruby on Rails.
+    Author: Sonny Le
 
-<h1>Getting Started</h1>
+== Getting Started
 
-<h2>Requirements</h2>
-
-<h4>Systems</h4>
+= Requirements
 Ruby 1.8.6
 Rails 2.1.x or above
 Imagemagick
+MySQL
 
-<h4>Plugins</h4>
+= Plugins
 Paperclip - Easy file attachment library for ActiveRecord
 will_paginate - Pagination
 
-<h4>Download</h4>
-Clone the app from git:
-git clone git://github.com/sonnyle/SimplePhoneBook.git
+= Installation
+You can clone the app from github:
+    git clone git://github.com/sonnyle/SimplePhoneBook.git
 
-<h1>Author</h1>
-Sonny Le, son.thai.le@gmail.com
+After the app is installed, just run:
+ 
+    rake db:migrate
+ 
+as usual to setup the invite table. It is important that you have Imagemagick installed on your machine to handle the photo uploading.
+Once the app is installed and setup, start the server:
+    
+    ruby script/server
+
+If you have any questions or comments please e-mail son.thai.le@gmail.com
