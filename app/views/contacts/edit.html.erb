@@ -3,8 +3,13 @@
 <% form_for(@contact, :html=>{ :method => :put , :multipart => true }) do |f| %>  
   <%= f.error_messages %>
 
-  <%= render :partial => 'form',  :locals => {:f => f}%>    
-  <p>Current Photo</p>
-  <%= image_tag @contact.photo.url(:thumb) %>
-  <p class="submit"><%= f.submit "Update" %> | <%= link_to "Cancel", contact_path(@contact) %> </p>  
+  <div style="width: 70%; float: left;">
+    <%= render :partial => 'form',  :locals => {:f => f}%> 
+  </div>  
+  <div style="width: 30%; float: right;">       
+    <%= render :partial => 'upload_photo', :locals => {:f => f} %> 
+  </div>
+  <div style="float: left; width: 100%;">
+    <p class="submit"><%= f.submit "Update" %> | <%= link_to "Cancel", contact_path(@contact) %> </p>
+  </div>  
 <% end %>

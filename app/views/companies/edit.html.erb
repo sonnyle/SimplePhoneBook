@@ -3,8 +3,13 @@
 <% form_for(@company, :html=>{ :method => :put }) do |f| %>  
   <%= f.error_messages %>
 
-  <%= render :partial => 'form',  :locals => {:f => f}%>      
-  <label for='contacts'><span>Contact Lists</span></label>    
-  <%= render :partial => 'contact_selector', :locals => {:company => @company} %>   
-  <p class="submit"><%= f.submit "Update" %> | <%= link_to "Cancel", company_path(@company) %> </p>  
+  <div style="width: 70%; float: left;">
+    <%= render :partial => 'form',  :locals => {:f => f}%>
+  </div>  
+  <div style="width: 30%; float: right;">       
+    <%= render :partial => 'contact_selector', :locals => {:company => @company} %> 
+  </div>
+  <div style="float: left; width: 100%;">
+    <p><%= f.submit "Update" %> | <%= link_to "Cancel", company_path(@company) %> </p>  
+  </div>  
 <% end %>

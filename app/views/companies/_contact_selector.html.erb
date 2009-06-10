@@ -1,7 +1,11 @@
-<div class="listbox" id="foo">
-<% Contact.find_all_and_order_by_first_name.each do |contact| -%>    
-    <label>
-	<%= check_box_tag "contacts[ids][]", contact.id, company.is_associated_with?(contact), :id => "contacts[ids][#{contact.id}]" %><span><%= contact.full_name %></span>
-	</label>
-<% end -%>
-</div>
+<fieldset>
+  <legend>Contacts List</legend>    
+  <p class="small">Contacts that are not assigned with company</p>
+  <div class="listbox">
+  <% Contact.find_all_unassigned_and_order_by_first_name.each do |contact| -%>    
+      <label>
+          <%= check_box_tag "contacts[ids][]", contact.id, company.is_associated_with?(contact), :id => "contacts[ids][#{contact.id}]" %><span><%= contact.full_name %></span>
+          </label>
+  <% end -%>
+  </div>
+</fieldset>

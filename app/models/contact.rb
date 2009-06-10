@@ -19,7 +19,7 @@ class Contact < ActiveRecord::Base
   validates_format_of :email, 
     :with => /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/  
   validates_format_of :phone,
-    :with => /^\d\d \d\d\d \d\d\d\d\d\d/, :allow_blank => true, :message => "must be in the format of 00 xxx xxxxxx"
+    :with => /^([0]{2,2})+ (\d\d\d)+ (\d\d\d\d\d\d)+$/, :allow_blank => true, :message => "must be in the format of 00 xxx xxxxxx"
   
   # Contants
   cattr_reader :per_page
@@ -34,8 +34,8 @@ class Contact < ActiveRecord::Base
     self.first_name + " " + self.last_name
   end
   
-  def self.find_all_and_order_by_first_name
-    find(:all, :order=>'first_name', :select => ["first_name, last_name, id"])
+  def self.find_all_unassigned_and_order_by_first_name
+    find(:all, :order=>'first_name', :select => ["first_name, last_name, id"], :conditions=>["company_id IS NULL"])
   end
   
   # Find all contacts order by firstname and paginate

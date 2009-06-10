@@ -7,7 +7,7 @@ div.listbox{
     padding:0;
     list-style:none;
     overflow:auto;
-    border:solid 1px #666666;
+    border:solid 1px #d0d0d0;
     scrollbar-face-color:#cccccc; 
     scrollbar-highlight-color: #eeeeee; 
     scrollbar-shadow-color: buttonface; 
@@ -17,10 +17,10 @@ div.listbox{
     scrollbar-darkshadow-color: #aaaaaa;
     overflow-y: scroll;
     overflow-x: hidden;
-    min-height: 50px;
-    max-height: 100px; 
-    min-width: 140px;
-    max-width: 140px;
+    min-height: 200px;
+    max-height: 200px; 
+    min-width: 180px;
+    max-width: 180px;
 }
 
 div.listbox label input{float:left;}

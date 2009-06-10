@@ -19,9 +19,7 @@ class Company < ActiveRecord::Base
   
   # Contact selector
   def associate_with_contacts_by_id(contact_ids)
-
      clear_all_contact_associations
-
      contact_ids.each do |id|  
        contact = Contact.find_by_id(id)
        associate_with_contact(contact)
