@@ -18,8 +18,7 @@ After the app is installed, just run:
  
     rake db:migrate
  
-as usual to setup the invite tables. It is important that you have Imagemagick installed on your machine to handle the photo uploading.
-Once the app is installed and setup, start the server:
+as usual to setup the invite tables. It is important that you have Imagemagick installed on your machine to handle the photo uploading. Once the app is installed and setup, start the server:
     
     ruby script/server
 
