@@ -34,8 +34,16 @@ class Contact < ActiveRecord::Base
     self.first_name + " " + self.last_name
   end
   
+  def is_unassigned?(company)
+    !self.company.nil? && self.company != company
+  end
+  
   def self.find_all_unassigned_and_order_by_first_name
     find(:all, :order=>'first_name', :select => ["first_name, last_name, id"], :conditions=>["company_id IS NULL"])
+  end
+  
+  def self.find_all_and_order_by_first_name
+    find(:all, :order=>'first_name', :select => ["first_name, last_name, id, company_id"])
   end
   
   # Find all contacts order by firstname and paginate

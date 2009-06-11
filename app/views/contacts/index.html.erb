@@ -13,7 +13,8 @@
     <th>Name</th>
     <th>Last Name</th>
     <th>Email</th>
-    <th>Telephone</th>    
+    <th>Telephone</th> 
+    <th>Work</th>
     <th></th>
   </tr>
   
@@ -23,7 +24,8 @@
     <td><%= link_to contact.first_name, contact_path(contact) %></td>
     <td><%= link_to contact.last_name, contact_path(contact) %></td>
     <td><%= contact.email %></td>
-    <td><%= contact.phone %></td>     
+    <td><%= contact.phone %></td> 
+    <td><%= (link_to contact.company.name, company_path(contact.company)) rescue nil %></td>
     <td><%= link_to 'Remove', contact, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>

@@ -1,10 +1,10 @@
 <fieldset>
   <legend>Contacts List</legend>    
-  <p class="small">Contacts that are not assigned with company</p>
+  <p class="small">You can only assign/unassign contacts that are associated with this company or with no company. Contacts that are with other companies are grey out.</p>
   <div class="listbox">
-  <% Contact.find_all_unassigned_and_order_by_first_name.each do |contact| -%>    
+  <% Contact.find_all_and_order_by_first_name.each do |contact| -%>    
       <label>
-          <%= check_box_tag "contacts[ids][]", contact.id, company.is_associated_with?(contact), :id => "contacts[ids][#{contact.id}]" %><span><%= contact.full_name %></span>
+          <%= check_box_tag "contacts[ids][]", contact.id, company.is_associated_with?(contact), :id => "contacts[ids][#{contact.id}]", :disabled => contact.is_unassigned?(company) %><span><%= contact.full_name %></span>
           </label>
   <% end -%>
   </div>

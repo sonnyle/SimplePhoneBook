@@ -11,7 +11,7 @@ class CreateCompanies < ActiveRecord::Migration
       t.timestamps
     end
     
-    # Populate some random records here
+    # Load some random data
     Company.create(:name => "Banana", :address_line_1 => "Some street", :city => "Birmingham", :county => "Midlands", :postcode => "NE1 1EE")
     Company.create(:name => "Apple", :address_line_1 => "Silicon Valley", :city => "Wimbledon", :county => "London", :postcode => "SW19 3LY")
     Company.create(:name => "Orange", :address_line_1 => "City Garden", :city => "London", :county => "London", :postcode => "SE1 8TG")

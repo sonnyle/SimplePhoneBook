@@ -6,7 +6,9 @@
   <div style="width: 70%; float: left;">
     <%= render :partial => 'form',  :locals => {:f => f}%> 
   </div>  
-  <div style="width: 30%; float: right;">       
+  <div style="width: 30%; float: right;">
+    <p>Current Photo</p>
+    <%= image_tag @contact.photo.url(:thumb) %>
     <%= render :partial => 'upload_photo', :locals => {:f => f} %> 
   </div>
   <div style="float: left; width: 100%;">
