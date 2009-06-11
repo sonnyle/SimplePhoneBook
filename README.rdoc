@@ -7,7 +7,12 @@ It's a clean, simple app and has no stylesheets, you can easily plug it into you
 === Requirements
 - Ruby 1.8.6
 - Rails 2.1.x or above
-- Imagemagick
+- Imagemagick (Try to install the latest version of ImageMagick if you could.)
+    - If develop in Windows env, just download the ImageMagick installer (I use 16 bits-per-pixel without any problems) at: http://www.imagemagick.org/script/binary-releases.php#windows
+    - If you got OSX, you have to install ImageMagick using MacPorts (make sure you have MacPorts installed first)
+
+        sudo port install ImageMagick
+        
 - MySQL
 
 === Installation
